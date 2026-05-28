@@ -13,7 +13,7 @@
     </style>
         <defs>
               <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#fc00ff"/><stop offset="100%" stop-color="#00dbde"/>
+                <stop offset="0%" stop-color="#9796f0"/><stop offset="100%" stop-color="#fbc7d4"/>
               </linearGradient>
             </defs>
         
@@ -44,6 +44,6 @@
         </path>
       </g>
          <text text-anchor="middle" alignment-baseline="middle" x="50%" y="33%" class="text" style="fill:#ffffff;" stroke="#none" stroke-width="1" >Deep Nayak</text>
-        <text text-anchor="middle" alignment-baseline="middle" x="50%" y="56%" class="desc" style="fill:#ffffff;">Backend & Cloud Engineer | M.S. Computer Science @ ASU</text>
+        <text text-anchor="middle" alignment-baseline="middle" x="50%" y="56%" class="desc" style="fill:#ffffff;">Backend and Cloud Engineer | M.S. Computer Science @ ASU</text>
       </svg>
     
