@@ -24,7 +24,7 @@ I focus on designing production-ready systems with strong API architecture, secu
 - 🔭 Working on: scalable backend systems, distributed pipelines, and full-stack apps
 - 🎓 Studying: M.S. Computer Science @ ASU (`Aug 2025 – May 2027`)
 - 🌱 Exploring: cloud-native architectures, Kubernetes orchestration, and real-time data engineering
-- 💬 Ask me about: `.NET Core`, `Java`, `React`, `REST APIs`, `Azure DevOps`, `AWS`
+- 💬 Ask me about: `.NET Core`, `ASP.NET Web API`, `Java`, `React`, `Node.js`, `REST APIs`, `SQL Server`, `PostgreSQL`, `Docker`, `Kubernetes`, `Azure DevOps`, `AWS`, `CI/CD`, `Apache Kafka`, `Distributed Systems`
 - 📫 Reach me at: [deepnayakusa@gmail.com](mailto:deepnayakusa@gmail.com)
 
 ---
