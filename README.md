@@ -167,21 +167,6 @@ Data Stream -> Kafka -> Python ETL -> Neo4j Graph Models
 
 ---
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=Deep-nayak007&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&rank_icon=github" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Deep-nayak007&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
-
-<br/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Deep-nayak007&theme=tokyonight&hide_border=true" />
-
-</div>
-
----
-
 ## 🎓 Education
 
 | Degree | Institution | Score | Year |
