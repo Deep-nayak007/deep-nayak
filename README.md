@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Deep-nayak007/Deep-nayak007/main/assets/profile-header-v2.svg" width="100%"/>
+<img src="https://raw.githubusercontent.com/Deep-nayak007/Deep-nayak007/main/assets/profile-header-v3.svg" width="100%"/>
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=2500&pause=900&color=00F7FF&center=true&vCenter=true&width=950&lines=Engineering+Scalable+APIs+for+Real-World+Products;10%2C000%2B+Users+Served+%7C+40%25+Faster+Deployments;.NET+%E2%80%A2+Java+%E2%80%A2+React+%E2%80%A2+AWS+%E2%80%A2+Azure+%E2%80%A2+Kubernetes)](https://github.com/Deep-nayak007)
 
