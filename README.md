@@ -126,3 +126,24 @@ Recognized by the Intellectual Property Office, United Kingdom.
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:deepnayakusa@gmail.com)
 
 </div>
+
+---
+
+## Deployment (Auto-Update Enabled)
+
+### GitHub Pages (Live + Auto)
+- Configure GitHub Pages to deploy from branch `main` and folder `/(root)`.
+- After this one-time setting, every push to `main` goes live automatically.
+- Expected live URL: `https://deep-nayak007.github.io/deep-nayak/`
+
+### Netlify (Second Host + Auto)
+- This repo includes Netlify config: `netlify.toml`
+
+To enable Netlify auto-deploy from this same repo:
+1. In Netlify, create a new site from GitHub and select this repository.
+2. Build command: leave empty.
+3. Publish directory: `.`
+
+After this one-time setup, any file change pushed to `main` is automatically live on:
+- GitHub Pages
+- Netlify

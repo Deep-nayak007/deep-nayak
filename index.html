@@ -1,352 +1,366 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Deep Nayak | Software Engineer Portfolio</title>
     <meta
       name="description"
-      content="Deep Nayak is a software developer and M.S. Computer Science student at ASU focused on backend APIs, cloud systems, and full-stack delivery."
+      content="Deep Nayak is a Software Engineer and M.S. Computer Science student at Arizona State University, focused on backend, cloud, and full-stack systems."
     />
-    <meta name="theme-color" content="#0d1110" />
+    <meta name="theme-color" content="#0a0a0a" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Sora:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
   </head>
   <body>
-    <div class="bg-orb orb-a" aria-hidden="true"></div>
-    <div class="bg-orb orb-b" aria-hidden="true"></div>
-    <div id="spotlightFx" aria-hidden="true"></div>
-    <div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
+    <div class="scroll-progress" aria-hidden="true">
+      <span id="scrollProgressBar"></span>
+    </div>
 
-    <header class="site-nav" id="siteNav">
-      <a href="#hero" class="brand">deep.nayak</a>
+    <div id="raceOverlay" aria-hidden="true">
+      <h2>RACE START SEQUENCE</h2>
+      <div class="race-lights">
+        <span class="race-light" id="l1"></span>
+        <span class="race-light" id="l2"></span>
+        <span class="race-light" id="l3"></span>
+        <span class="race-light" id="l4"></span>
+        <span class="race-light" id="l5"></span>
+      </div>
+    </div>
 
-      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav">
-        Menu
-      </button>
-
-      <nav class="nav-links" id="primaryNav" aria-label="Primary Navigation">
-        <a href="#work">Work</a>
-        <a href="#experience">Experience</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <button class="theme-btn" id="themeBtn" aria-label="Toggle color theme">Light</button>
+    <header id="mainNav">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">DN // PIT WALL</a>
+        <button id="menuBtn" class="menu-btn" aria-label="Open Menu" aria-expanded="false">MENU</button>
+        <nav id="navLinks" class="nav-links" aria-label="Primary Navigation">
+          <a href="#about">S1 // ABOUT</a>
+          <a href="#experience">S2 // XP</a>
+          <a href="#projects">S3 // PROJ</a>
+          <a href="#skills">S4 // SKILLS</a>
+          <a href="#education">S5 // EDU</a>
+          <a href="#contact">CONTACT</a>
+        </nav>
+        <button id="commandTrigger" class="command-launch" type="button" aria-label="Open Command Center">
+          COMMANDS <span>CTRL/CMD + K</span>
+        </button>
+      </div>
     </header>
 
     <main>
-      <section class="hero section" id="hero">
-        <p class="eyebrow reveal">Software Engineer | Tempe, Arizona</p>
-        <h1 class="hero-title reveal">
-          <span>Deep</span>
-          <span>Nayak</span>
-        </h1>
-        <p class="hero-copy reveal">
-          M.S. Computer Science student at Arizona State University (4.0 GPA), building scalable
-          API and cloud systems with measurable impact. Actively seeking Software Engineering
-          Internship and Co-op opportunities, and available to join immediately upon receiving an
-          offer letter.
+      <section id="hero">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="hero-label">// DRIVER PROFILE - INITIALIZING</p>
+          <h1 class="hero-name">Deep <span>Nayak</span></h1>
+          <p id="heroTyping" class="hero-typing">
+            <span id="typedText"></span><span class="cursor-blink"></span>
+          </p>
+          <p class="hero-tagline">
+            Open to Software Engineering Internship and Co-op opportunities. Available to join
+            immediately upon receiving an offer letter.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="assets/Deep_Nayak_USA_Resume.pdf" target="_blank" rel="noopener">
+              View Resume
+            </a>
+            <a class="btn btn-secondary" href="#contact">Contact Me</a>
+          </div>
+          <p class="command-tip">Need quick actions? Open Command Center with Ctrl/Cmd + K.</p>
+        </div>
+
+        <div class="stats-bar">
+          <article class="stat-item">
+            <span class="stat-value" data-target="10000" data-suffix="+">0</span>
+            <span class="stat-label">Users Supported</span>
+          </article>
+          <article class="stat-item">
+            <span class="stat-value" data-target="40" data-suffix="%">0</span>
+            <span class="stat-label">Faster Deployments</span>
+          </article>
+          <article class="stat-item">
+            <span class="stat-value" data-target="35" data-suffix="%">0</span>
+            <span class="stat-label">Backend Gain</span>
+          </article>
+          <article class="stat-item">
+            <span class="stat-value" data-target="200" data-suffix="+">0</span>
+            <span class="stat-label">Locations Scaled</span>
+          </article>
+          <article class="stat-item">
+            <span class="stat-value" data-target="4.0" data-decimals="1">0</span>
+            <span class="stat-label">ASU GPA</span>
+          </article>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section id="about" class="anim-fade">
+        <p class="sector-label">// SECTOR 01</p>
+        <h2 class="section-title">Driver Profile</h2>
+        <p class="bio">
+          I am a Software Engineer with around 4 years of experience building backend and cloud-first
+          systems for enterprise workflows, finance, and analytics. My focus is on secure API
+          architecture, reliable deployments, and measurable performance gains. I am currently
+          pursuing my M.S. in Computer Science at Arizona State University with a 4.0/4.0 GPA.
+        </p>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section id="experience">
+        <p class="sector-label anim-fade">// SECTOR 02</p>
+        <h2 class="section-title anim-fade">Lap Times</h2>
+
+        <article class="exp-card anim-fade">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-company">We3.Tech</h3>
+            </div>
+            <div class="exp-meta">
+              <p class="exp-role">Software Developer</p>
+              <p class="exp-date">Aug 2024 - Jul 2025</p>
+              <p class="exp-location">India</p>
+            </div>
+          </div>
+          <ul class="exp-bullets">
+            <li>Designed and delivered secure .NET Core APIs supporting 200+ franchise locations.</li>
+            <li>Improved backend performance by 35% with async processing and query optimization.</li>
+            <li>Built real-time data pipelines improving analytics accuracy by 25%.</li>
+            <li>Shipped React + .NET features with third-party token-based integrations.</li>
+          </ul>
+        </article>
+
+        <article class="exp-card anim-fade">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-company">MUFG</h3>
+            </div>
+            <div class="exp-meta">
+              <p class="exp-role">Associate Software Developer</p>
+              <p class="exp-date">Jul 2022 - Aug 2024</p>
+              <p class="exp-location">India</p>
+            </div>
+          </div>
+          <ul class="exp-bullets">
+            <li>Led API development for a member platform serving 10,000+ enterprise users.</li>
+            <li>Integrated JWT auth and Okta SSO with role-based access control.</li>
+            <li>Reduced production defects by 30% using test automation and SonarQube gates.</li>
+            <li>Optimized Azure DevOps pipelines and reduced deployment time by 40%.</li>
+          </ul>
+        </article>
+
+        <article class="exp-card anim-fade">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-company">Taruna Infosoft</h3>
+            </div>
+            <div class="exp-meta">
+              <p class="exp-role">Full Stack Developer Intern</p>
+              <p class="exp-date">Jan 2021 - Jun 2022</p>
+              <p class="exp-location">India</p>
+            </div>
+          </div>
+          <ul class="exp-bullets">
+            <li>Built a React + Java e-commerce platform processing 5,000+ secure transactions.</li>
+            <li>Implemented RBAC and server-side validation to strengthen security.</li>
+            <li>Optimized SQL schema/query patterns and automated reporting workflows in Python.</li>
+          </ul>
+        </article>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section id="projects">
+        <p class="sector-label anim-fade">// SECTOR 03</p>
+        <h2 class="section-title anim-fade">Constructor Cards</h2>
+
+        <div class="projects-grid">
+          <article class="proj-card anim-fade">
+            <div class="speed-lines"></div>
+            <p class="proj-tag">Security + Full Stack</p>
+            <h3 class="proj-name">Remote File Transmission System</h3>
+            <p class="proj-desc">
+              Secure file-sharing platform with QR-based access, OTP authentication, encrypted
+              storage, and role-based authorization.
+            </p>
+            <div class="proj-stats">
+              <span class="proj-stat">.NET MVC</span>
+              <span class="proj-stat">REST APIs</span>
+              <span class="proj-stat">Security First</span>
+            </div>
+            <a class="proj-link" href="https://github.com/Deep-nayak007/Remote-File-Sharing-System-using-QR-Code" target="_blank" rel="noopener">
+              View Project
+            </a>
+          </article>
+
+          <article class="proj-card anim-fade">
+            <div class="speed-lines"></div>
+            <p class="proj-tag">HealthTech + Real-Time</p>
+            <h3 class="proj-name">Vitals Wi-Fi App</h3>
+            <p class="proj-desc">
+              Real-time vitals app that measures on iPhone and streams to Mac dashboard over Wi-Fi,
+              with heart and breath tracking modes plus confidence scoring.
+            </p>
+            <div class="proj-stats">
+              <span class="proj-stat">Node.js</span>
+              <span class="proj-stat">WebSocket</span>
+              <span class="proj-stat">Signal Processing</span>
+            </div>
+            <a class="proj-link" href="https://github.com/Deep-nayak007/vitals-wifi-app" target="_blank" rel="noopener">
+              View Project
+            </a>
+          </article>
+
+          <article class="proj-card anim-fade">
+            <div class="speed-lines"></div>
+            <p class="proj-tag">AI + Healthcare</p>
+            <h3 class="proj-name">Clinical Data Reconciliation Engine</h3>
+            <p class="proj-desc">
+              AI-powered full-stack system to reconcile conflicting medication records and validate
+              patient data quality across clinical workflows.
+            </p>
+            <div class="proj-stats">
+              <span class="proj-stat">FastAPI</span>
+              <span class="proj-stat">React</span>
+              <span class="proj-stat">LLM Integration</span>
+            </div>
+            <a class="proj-link" href="https://github.com/Deep-nayak007/clinical-reconciliation-engine" target="_blank" rel="noopener">
+              View Project
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section id="skills">
+        <p class="sector-label anim-fade">// SECTOR 04</p>
+        <h2 class="section-title anim-fade">Telemetry</h2>
+
+        <div class="skills-grid">
+          <article class="skill-group anim-fade">
+            <h3 class="skill-group-title">Power Unit - Languages</h3>
+            <div class="skill-tags">
+              <span>C#</span><span>Java</span><span>Python</span><span>JavaScript</span>
+              <span>TypeScript</span><span>SQL</span><span>C++</span><span>HTML5</span><span>CSS3</span>
+            </div>
+          </article>
+
+          <article class="skill-group anim-fade">
+            <h3 class="skill-group-title">Chassis - Frameworks</h3>
+            <div class="skill-tags">
+              <span>.NET Core</span><span>ASP.NET MVC</span><span>ASP.NET Web API</span><span>React</span>
+              <span>Node.js</span><span>Express</span><span>Angular</span><span>Spring Boot</span>
+              <span>Hibernate</span><span>Flask</span>
+            </div>
+          </article>
+
+          <article class="skill-group anim-fade">
+            <h3 class="skill-group-title">Electronics - Cloud & DevOps</h3>
+            <div class="skill-tags">
+              <span>AWS</span><span>Azure</span><span>Azure DevOps</span><span>Docker</span>
+              <span>Kubernetes</span><span>Kafka</span><span>GitLab CI/CD</span><span>Jenkins</span>
+            </div>
+          </article>
+
+          <article class="skill-group anim-fade">
+            <h3 class="skill-group-title">Data Systems - Databases & Tools</h3>
+            <div class="skill-tags">
+              <span>SQL Server</span><span>PostgreSQL</span><span>Oracle SQL</span><span>MongoDB</span>
+              <span>MySQL</span><span>Postman</span><span>Git</span><span>SonarQube</span><span>Okta</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section id="education">
+        <p class="sector-label anim-fade">// SECTOR 05</p>
+        <h2 class="section-title anim-fade">Driver Academy</h2>
+
+        <article class="edu-card anim-fade">
+          <div>
+            <h3 class="edu-school">Arizona State University</h3>
+            <p class="edu-degree">M.S. Computer Science</p>
+            <p class="edu-meta">Aug 2025 - May 2027 | Tempe, AZ</p>
+          </div>
+          <p class="edu-score">4.0 / 4.0</p>
+        </article>
+
+        <article class="edu-card anim-fade">
+          <div>
+            <h3 class="edu-school">University of Mumbai</h3>
+            <p class="edu-degree">B.E. Computer Engineering</p>
+            <p class="edu-meta">Jun 2018 - Jun 2022 | Mumbai, India</p>
+          </div>
+          <p class="edu-score">8.58 / 10</p>
+        </article>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section id="contact">
+        <p class="sector-label">// RACE CONTROL</p>
+        <h2 class="section-title">Let&apos;s Connect</h2>
+        <p class="contact-summary">
+          I am actively looking for Internship and Co-op opportunities, and can join immediately.
         </p>
 
-        <div class="hero-actions reveal">
-          <a class="btn btn-primary" href="assets/Deep_Nayak_USA_Resume.pdf" download="Deep_Nayak_USA_Resume.pdf">
-            View Resume
+        <div class="contact-grid">
+          <a class="contact-link" href="mailto:deepnayakusa@gmail.com">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">deepnayakusa@gmail.com</span>
           </a>
-          <a class="btn btn-ghost" href="mailto:deepnayakusa@gmail.com">Email Me</a>
-        </div>
-
-        <div class="hero-status reveal">
-          <span class="status-pill"><i></i>Open to Internship and Co-op Opportunities</span>
-          <span class="status-pill">Available to Join Immediately</span>
-        </div>
-
-        <div class="opportunity-banner reveal">
-          <p>Current Priority</p>
-          <h3>Software Engineering Internship + Co-op Roles</h3>
-          <span>Immediate joiner for backend, cloud, and full-stack teams.</span>
-        </div>
-
-        <div class="impact-grid reveal">
-          <article>
-            <h3>10,000+</h3>
-            <p>Users served in enterprise platform work</p>
-          </article>
-          <article>
-            <h3>40%</h3>
-            <p>Faster deployments through CI/CD optimization</p>
-          </article>
-          <article>
-            <h3>35%</h3>
-            <p>Backend performance improvement in production APIs</p>
-          </article>
-          <article>
-            <h3>200+</h3>
-            <p>Franchise locations supported with secure services</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="ticker-wrap" aria-label="Core Technology Stack">
-        <div class="ticker">
-          <div class="ticker-track">
-            <span>.NET Core</span>
-            <span>ASP.NET Web API</span>
-            <span>Java</span>
-            <span>React</span>
-            <span>Node.js</span>
-            <span>AWS</span>
-            <span>Azure</span>
-            <span>Docker</span>
-            <span>Kubernetes</span>
-            <span>Apache Kafka</span>
-            <span>PostgreSQL</span>
-            <span>MongoDB</span>
-            <span>.NET Core</span>
-            <span>ASP.NET Web API</span>
-            <span>Java</span>
-            <span>React</span>
-            <span>Node.js</span>
-            <span>AWS</span>
-            <span>Azure</span>
-            <span>Docker</span>
-            <span>Kubernetes</span>
-            <span>Apache Kafka</span>
-            <span>PostgreSQL</span>
-            <span>MongoDB</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="work">
-        <div class="section-head reveal">
-          <p>Selected Projects</p>
-          <h2>Work</h2>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card reveal tilt-card">
-            <div class="project-content">
-              <div class="project-top">
-                <span class="project-index">01</span>
-                <span class="project-badge">Security + Full Stack</span>
-              </div>
-              <h3>Remote File Transmission System</h3>
-              <p>
-                Built a secure file-sharing platform using .NET MVC and .NET Core with QR-based
-                access, OTP authentication, encrypted storage, and role-based authorization.
-              </p>
-              <ul>
-                <li>Faster upload/download flow after backend and query optimization</li>
-                <li>REST API architecture with secure transport controls</li>
-              </ul>
-              <div class="project-links">
-                <a href="https://github.com/Deep-nayak007/Remote-File-Sharing-System-using-QR-Code" target="_blank" rel="noopener">
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal tilt-card">
-            <div class="project-content">
-              <div class="project-top">
-                <span class="project-index">02</span>
-                <span class="project-badge">HealthTech + Real-Time</span>
-              </div>
-              <h3>Vitals Wi-Fi App</h3>
-              <p>
-                Built a real-time vitals application where iPhone measurements stream to a Mac
-                dashboard over Wi-Fi, with dedicated heart and breath tracking modes.
-              </p>
-              <ul>
-                <li>Implemented signal processing with confidence scoring and live progress tracking</li>
-                <li>Added reliable secure tunnel flow for mobile HTTPS connectivity</li>
-              </ul>
-              <div class="project-links">
-                <a href="https://github.com/Deep-nayak007/vitals-wifi-app" target="_blank" rel="noopener">
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal tilt-card">
-            <div class="project-content">
-              <div class="project-top">
-                <span class="project-index">03</span>
-                <span class="project-badge">AI + Healthcare</span>
-              </div>
-              <h3>Clinical Data Reconciliation Engine</h3>
-              <p>
-                Developed an AI-powered full-stack system to reconcile conflicting medication records
-                and validate patient data quality across healthcare workflows.
-              </p>
-              <ul>
-                <li>Built FastAPI endpoints for reconciliation and data-quality scoring</li>
-                <li>Integrated intelligent reasoning with robust fallback behavior and tests</li>
-              </ul>
-              <div class="project-links">
-                <a href="https://github.com/Deep-nayak007/clinical-reconciliation-engine" target="_blank" rel="noopener">
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="experience">
-        <div class="section-head reveal">
-          <p>Professional Experience</p>
-          <h2>Experience</h2>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <div class="timeline-head">
-              <h3>Software Developer | We3.Tech</h3>
-              <span>Aug 2024 - Jul 2025</span>
-            </div>
-            <p>
-              Designed and delivered scalable .NET Core APIs for 200+ franchise locations, with
-              role-based authentication, structured logging, and validation.
-            </p>
-            <p>
-              Improved backend performance by 35% with async processing, SQL tuning, and in-memory
-              caching.
-            </p>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="timeline-head">
-              <h3>Associate Software Developer | MUFG</h3>
-              <span>Jul 2022 - Aug 2024</span>
-            </div>
-            <p>
-              Led backend API development for an enterprise member center platform used by 10,000+
-              users with JWT auth and Okta SSO.
-            </p>
-            <p>
-              Reduced deployment time by 40% through Azure DevOps CI/CD optimization and improved
-              release stability.
-            </p>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="timeline-head">
-              <h3>Full Stack Developer Intern | Taruna Infosoft</h3>
-              <span>Jan 2021 - Jun 2022</span>
-            </div>
-            <p>
-              Built an end-to-end e-commerce platform using React and Java REST APIs with secure
-              payment processing.
-            </p>
-            <p>
-              Improved backend schema design and developed Python automation scripts for reporting
-              workflows.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section split" id="about">
-        <div class="about-copy reveal">
-          <p class="section-label">About</p>
-          <h2>Building production software with measurable outcomes.</h2>
-          <p>
-            I focus on backend architecture, cloud reliability, and full-stack product delivery. My
-            approach combines secure design, practical automation, and performance-driven
-            engineering.
-          </p>
-          <p>
-            In July 2024, I was awarded a UK design patent (Design No. 6376787) for "Smart Baby
-            Swing for Optimal Infant Care."
-          </p>
-          <div class="about-links">
-            <a href="https://www.linkedin.com/in/deep-nayak" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://github.com/Deep-nayak007" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-
-        <aside class="about-panel reveal">
-          <div class="panel-block">
-            <h3>Education</h3>
-            <p>Arizona State University</p>
-            <p>M.S. Computer Science</p>
-            <p>Aug 2025 - May 2027 | GPA: 4.0/4.0</p>
-          </div>
-          <div class="panel-block">
-            <p>University of Mumbai</p>
-            <p>B.E. Computer Engineering</p>
-            <p>Jun 2018 - Jun 2022 | CGPA: 8.58/10</p>
-          </div>
-        </aside>
-      </section>
-
-      <section class="section" id="skills">
-        <div class="section-head reveal">
-          <p>Technical Toolkit</p>
-          <h2>Skills</h2>
-        </div>
-
-        <div class="skill-groups">
-          <article class="skill-card reveal">
-            <h3>Languages</h3>
-            <div class="chips">
-              <span>C#</span><span>Java</span><span>Python</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span><span>C++</span><span>HTML5</span><span>CSS3</span>
-            </div>
-          </article>
-          <article class="skill-card reveal">
-            <h3>Frameworks</h3>
-            <div class="chips">
-              <span>.NET Core</span><span>ASP.NET MVC</span><span>ASP.NET Web API</span><span>React</span><span>Node.js</span><span>Express</span><span>Angular</span><span>Spring Boot</span><span>Hibernate</span><span>Flask</span><span>Pandas</span><span>NumPy</span>
-            </div>
-          </article>
-          <article class="skill-card reveal">
-            <h3>Cloud and DevOps</h3>
-            <div class="chips">
-              <span>AWS</span><span>Azure</span><span>Azure DevOps</span><span>Docker</span><span>Kubernetes</span><span>Kafka</span><span>GitLab CI/CD</span><span>Jenkins</span><span>CI/CD Pipelines</span>
-            </div>
-          </article>
-          <article class="skill-card reveal">
-            <h3>Databases and Tools</h3>
-            <div class="chips">
-              <span>SQL Server</span><span>PostgreSQL</span><span>Oracle SQL</span><span>MongoDB</span><span>MySQL</span><span>Postman</span><span>Git</span><span>Visual Studio</span><span>VS Code</span><span>JIRA</span><span>SonarQube</span><span>Okta SSO</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section contact" id="contact">
-        <p class="section-label reveal">Get In Touch</p>
-        <h2 class="reveal">Let&apos;s build something meaningful.</h2>
-        <p class="reveal">
-          Actively seeking Software Engineering Internship and Co-op opportunities. I can join
-          immediately after receiving an offer letter, and I am excited to contribute to backend,
-          cloud, distributed systems, and full-stack teams.
-        </p>
-        <div class="contact-links reveal">
-          <a class="btn btn-primary" href="mailto:deepnayakusa@gmail.com">deepnayakusa@gmail.com</a>
-          <a class="btn btn-ghost" href="assets/Deep_Nayak_USA_Resume.pdf" download="Deep_Nayak_USA_Resume.pdf">
-            Download Resume
+          <a class="contact-link" href="tel:+16027378629">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">602-737-8629</span>
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/deep-nayak" target="_blank" rel="noopener">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">deep-nayak</span>
+          </a>
+          <a class="contact-link" href="https://github.com/Deep-nayak007" target="_blank" rel="noopener">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">Deep-nayak007</span>
           </a>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <p><a href="tel:+16027378629">602-737-8629</a></p>
+    <footer>
       <p>Tempe, Arizona</p>
-      <p>&copy; <span id="year"></span> Deep Nayak</p>
+      <p>&copy; <span id="year"></span> Deep Nayak // Built at the Pit Wall</p>
     </footer>
 
-    <div id="clickFxLayer" aria-hidden="true"></div>
+    <div id="commandPalette" class="command-palette" aria-hidden="true">
+      <button class="command-overlay" type="button" data-close-palette aria-label="Close Command Center"></button>
+      <section class="command-panel" role="dialog" aria-modal="true" aria-labelledby="commandTitle">
+        <div class="command-head">
+          <p id="commandTitle">Pit Command Center</p>
+          <span>Esc to close</span>
+        </div>
+        <div class="command-input-wrap">
+          <input
+            id="commandInput"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="Type a command: contact, resume, experience, copy email..."
+            aria-label="Search commands"
+          />
+        </div>
+        <ul id="commandList" class="command-list" role="listbox" aria-label="Command Options"></ul>
+        <p class="command-hint">Use Up/Down arrow keys and press Enter.</p>
+      </section>
+    </div>
+
+    <div id="actionToast" class="action-toast" role="status" aria-live="polite" aria-atomic="true"></div>
   </body>
 </html>
