@@ -8,7 +8,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/deep-nayak)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:deepnayakusa@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-181717?style=for-the-badge&logo=githubpages&logoColor=white)](https://deep-nayak007.github.io/deep-nayak/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-00A98F?style=for-the-badge&logo=githubpages&logoColor=white)](https://deep-nayak007.github.io/deep-nayak/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Deep-nayak007)
 
 </div>
