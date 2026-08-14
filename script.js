@@ -87,7 +87,7 @@ function setupCommandPalette() {
     },
     {
       title: "Jump to Projects",
-      desc: "Open constructor cards",
+      desc: "Open engineering projects",
       key: "NAV",
       terms: "projects github portfolio work",
       action: () => scrollToSection("projects")
