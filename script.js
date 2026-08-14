@@ -101,9 +101,9 @@ function setupCommandPalette() {
     },
     {
       title: "Jump to Contact",
-      desc: "Reach out for internship or co-op",
+      desc: "Reach out about Fall 2027 opportunities",
       key: "NAV",
-      terms: "contact hire internship coop co-op",
+      terms: "contact hire full-time 2027 software engineering",
       action: () => scrollToSection("contact")
     },
     {
@@ -465,8 +465,9 @@ function setupTypingEffect() {
 
   const lines = [
     "M.S. Computer Science @ Arizona State University (4.0 GPA)",
-    "Software Engineer focused on backend, cloud, and full-stack systems",
-    "Open to Internship and Co-op opportunities | Immediate Joiner"
+    "Software Engineer Intern @ Nextech Systems | 12+ production features shipped",
+    "C# • .NET • Angular • React • Python • AWS • Azure",
+    "Seeking Fall 2027 full-time Software Engineering opportunities"
   ];
 
   if (prefersReducedMotion) {
