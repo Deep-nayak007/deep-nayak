@@ -17,7 +17,7 @@
 
 ## About Me
 
-I am a Software Developer with 4 years of experience building backend and cloud-first systems for finance, analytics, and enterprise workflows. I am currently pursuing an M.S. in Computer Science at Arizona State University (4.0/4.0 GPA), focused on production-grade API architecture, distributed systems, and DevOps reliability. My work emphasizes secure design, measurable performance gains, and clean delivery across full-stack products.
+I am a Software Engineer with 3+ years of experience building full-stack applications, backend systems, and cloud-based solutions across healthcare, finance, analytics, and enterprise workflows. I am currently pursuing an M.S. in Computer Science at Arizona State University (4.0/4.0 GPA), focused on production-grade API architecture, distributed systems, and DevOps reliability. My work emphasizes secure design, measurable performance gains, and clean delivery across full-stack products.
 
 - Ask me about: `.NET Core`, `ASP.NET Web API`, `Java`, `React`, `Node.js`, `REST APIs`, `SQL Server`, `PostgreSQL`, `Docker`, `Kubernetes`, `Azure DevOps`, `AWS`, `CI/CD`, `Apache Kafka`, `Distributed Systems`
 
@@ -49,6 +49,12 @@ I am a Software Developer with 4 years of experience building backend and cloud-
 
 ## Experience
 
+### Software Engineer Intern - Nextech Systems (`Jun 2026 - Aug 2026`)
+- **Shipped 12+ production features and fixes** across scheduler, billing, and patient modules supporting **5,000+ monthly appointments**.
+- Built backend logic using C# for API endpoints and Python for billing data processing.
+- Improved scheduler behavior with Bryntum calendar APIs for live time indicators and dynamic row scaling.
+- Refactored billing/provider API services and added Karma unit tests within GitHub PR, CI, and SNYK workflows.
+
 ### Software Developer - We3.Tech (`Aug 2024 - Jul 2025`)
 - **Scaled operations to 200+ franchise locations:** designed and delivered secure .NET Core REST APIs with role-based authentication, validation, and structured logging.
 - **Improved backend performance by 35%:** optimized async workflows, SQL queries, and in-memory caching for faster response paths.
@@ -61,11 +67,6 @@ I am a Software Developer with 4 years of experience building backend and cloud-
 - **Accelerated delivery by 40%:** optimized Azure DevOps CI/CD pipelines for faster deploys and stronger rollback reliability.
 - **Raised frontend efficiency:** built modular React components that improved UI performance and reduced support tickets by 25%.
 
-### Full Stack Developer Intern - Taruna Infosoft (`Jan 2021 - Jun 2022`)
-- **Processed 5,000+ secure transactions:** built and deployed a React + Java REST e-commerce application with Razorpay/PayPal integration.
-- **Improved backend throughput:** optimized relational schema design and SQL query execution patterns.
-- **Strengthened application security:** implemented role-based access control and server-side validation.
-- **Increased team efficiency:** created Python automation scripts for reporting and recurring workflows.
 
 ---
 

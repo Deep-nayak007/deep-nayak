@@ -73,7 +73,7 @@ function setupCommandPalette() {
   const commands = [
     {
       title: "Jump to About",
-      desc: "Open engineer profile section",
+      desc: "Open software engineer profile section",
       key: "NAV",
       terms: "about profile sector 1 intro",
       action: () => scrollToSection("about")
@@ -87,7 +87,7 @@ function setupCommandPalette() {
     },
     {
       title: "Jump to Projects",
-      desc: "Open featured project cards",
+      desc: "Open constructor cards",
       key: "NAV",
       terms: "projects github portfolio work",
       action: () => scrollToSection("projects")
@@ -101,9 +101,9 @@ function setupCommandPalette() {
     },
     {
       title: "Jump to Contact",
-      desc: "Reach out about Fall 2027 opportunities",
+      desc: "Reach out for internship or co-op",
       key: "NAV",
-      terms: "contact hire full-time fall 2027",
+      terms: "contact hire internship coop co-op",
       action: () => scrollToSection("contact")
     },
     {
@@ -465,8 +465,8 @@ function setupTypingEffect() {
 
   const lines = [
     "M.S. Computer Science @ Arizona State University (4.0 GPA)",
-    "Software Engineer | Nextech Systems | MS CS @ Arizona State University",
-    "Seeking Fall 2027 full-time Software Engineering opportunities"
+    "Software Engineer focused on backend, cloud, and full-stack systems",
+    "Open to Internship and Co-op opportunities | Immediate Joiner"
   ];
 
   if (prefersReducedMotion) {
