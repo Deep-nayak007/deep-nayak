@@ -73,37 +73,37 @@ function setupCommandPalette() {
   const commands = [
     {
       title: "Jump to About",
-      desc: "Open driver profile section",
+      desc: "Open engineer profile section",
       key: "NAV",
       terms: "about profile sector 1 intro",
       action: () => scrollToSection("about")
     },
     {
       title: "Jump to Experience",
-      desc: "View lap times and impact",
+      desc: "View engineering experience and impact",
       key: "NAV",
-      terms: "experience lap times work jobs",
+      terms: "experience engineering work jobs",
       action: () => scrollToSection("experience")
     },
     {
       title: "Jump to Projects",
-      desc: "Open constructor cards",
+      desc: "Open featured project cards",
       key: "NAV",
       terms: "projects github portfolio work",
       action: () => scrollToSection("projects")
     },
     {
       title: "Jump to Skills",
-      desc: "Open telemetry and frameworks",
+      desc: "Open technical skills and frameworks",
       key: "NAV",
-      terms: "skills telemetry framework languages",
+      terms: "skills technical framework languages",
       action: () => scrollToSection("skills")
     },
     {
       title: "Jump to Contact",
       desc: "Reach out about Fall 2027 opportunities",
       key: "NAV",
-      terms: "contact hire full-time 2027 software engineering",
+      terms: "contact hire full-time fall 2027",
       action: () => scrollToSection("contact")
     },
     {
@@ -465,8 +465,7 @@ function setupTypingEffect() {
 
   const lines = [
     "M.S. Computer Science @ Arizona State University (4.0 GPA)",
-    "Software Engineer Intern @ Nextech Systems | 12+ production features shipped",
-    "C# • .NET • Angular • React • Python • AWS • Azure",
+    "Software Engineer | Nextech Systems | MS CS @ Arizona State University",
     "Seeking Fall 2027 full-time Software Engineering opportunities"
   ];
 
