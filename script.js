@@ -112,7 +112,7 @@ function setupCommandPalette() {
       desc: "Open resume PDF in a new tab",
       key: "FILE",
       terms: "resume cv download pdf",
-      action: () => window.open("assets/Deep_Nayak_USA_Resume.pdf", "_blank", "noopener")
+      action: () => window.open("assets/Deep_Nayak_USA_Resume.pdf?v=bf454b858620", "_blank", "noopener")
     },
     {
       title: "Copy Email",
