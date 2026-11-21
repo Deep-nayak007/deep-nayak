@@ -1,0 +1,47 @@
+name: Refresh projects and deploy portfolio
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "23 14 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: portfolio-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Test project generation
+        run: python -m unittest discover -s tests
+      - name: Refresh public GitHub projects
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/sync_projects.py
+      - uses: actions/configure-pages@v6
+      - name: Prepare website files
+        run: |
+          mkdir _site
+          cp index.html styles.css script.js .nojekyll _site/
+          cp -R assets _site/assets
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+      - name: Publish portfolio
+        id: deployment
+        uses: actions/deploy-pages@v5

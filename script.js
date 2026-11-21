@@ -27,6 +27,7 @@ if (yearNode) {
 
 setupNav();
 setupCommandPalette();
+setupProjectExplorer();
 setupRevealAnimations();
 setupCounters();
 setupTypingEffect();
@@ -360,6 +361,52 @@ function setupCommandPalette() {
       actionToast.classList.remove("show");
     }, 2100);
   }
+}
+
+function setupProjectExplorer() {
+  const grid = document.getElementById("projectGrid");
+  const search = document.getElementById("projectSearch");
+  const category = document.getElementById("projectCategory");
+  const count = document.getElementById("projectCount");
+  const empty = document.getElementById("projectEmpty");
+  const showMore = document.getElementById("projectShowMore");
+  const controls = document.getElementById("projectControls");
+  if (!grid || !search || !category || !count || !empty || !showMore || !controls) return;
+
+  const cards = Array.from(grid.querySelectorAll(".proj-card"));
+  const searchableCards = cards.map((card) => ({ card, text: card.textContent.toLowerCase() }));
+  const initialCount = 6;
+  let expanded = false;
+
+  function render() {
+    const terms = search.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    const filtering = terms.length > 0 || Boolean(category.value);
+    const matches = searchableCards.filter(({ card, text }) =>
+      (!category.value || card.dataset.category === category.value) &&
+      terms.every((term) => text.includes(term))
+    );
+    const visible = new Set(matches.slice(0, filtering || expanded ? matches.length : initialCount).map(({ card }) => card));
+    cards.forEach((card) => { card.hidden = !visible.has(card); });
+    count.textContent = filtering
+      ? `${matches.length} matching ${matches.length === 1 ? "project" : "projects"} of ${cards.length}`
+      : `Showing ${visible.size} of ${cards.length} projects · Refreshed daily from GitHub`;
+    empty.hidden = matches.length > 0;
+    showMore.hidden = filtering || expanded || matches.length <= initialCount;
+    showMore.textContent = `Show all ${cards.length} projects`;
+    showMore.setAttribute("aria-expanded", String(expanded));
+    updateScrollProgress();
+    highlightActiveLink();
+  }
+
+  search.addEventListener("input", render);
+  category.addEventListener("change", render);
+  showMore.addEventListener("click", () => {
+    expanded = true;
+    render();
+    cards[initialCount]?.querySelector("a")?.focus({ preventScroll: true });
+  });
+  controls.hidden = false;
+  render();
 }
 
 function setupRevealAnimations() {

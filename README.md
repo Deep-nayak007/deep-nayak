@@ -133,9 +133,28 @@ Recognized by the Intellectual Property Office, United Kingdom.
 ## Deployment (Auto-Update Enabled)
 
 ### GitHub Pages (Live + Auto)
-- Configure GitHub Pages to deploy from branch `main` and folder `/(root)`.
-- After this one-time setting, every push to `main` goes live automatically.
-- Expected live URL: `https://deep-nayak007.github.io/deep-nayak/`
+- GitHub Pages uses **GitHub Actions** as its publishing source.
+- `.github/workflows/deploy-portfolio.yml` refreshes the project section and publishes on every push to `main`, daily at 14:23 UTC (7:23 AM Arizona), and on manual dispatch.
+- Live URL: `https://deep-nayak007.github.io/deep-nayak/`
+
+### Project catalog
+
+`scripts/sync_projects.py` reads all public repositories from the GitHub API, sorts projects by their latest push, and renders static cards into `index.html`. Visitors do not need GitHub access or a working API connection. Search, focus-area filters, and a six-project preview are progressively enhanced with JavaScript; all projects remain available without JavaScript.
+
+`data/project-overrides.json` contains readable titles, README-based descriptions, technology tags, and optional demo links for existing projects. Forked repositories are labeled. The exclusion list omits profile/portfolio repositories, coding-practice collections, and duplicate copies of projects. Archived, disabled, and private repositories are excluded automatically.
+
+New public repositories appear automatically with their GitHub description (or first usable README paragraph), primary language, repository link, and homepage when set. They appear under **Other Projects** until a focus area is added to the overrides file.
+
+To refresh the checked-in HTML or verify the generator locally:
+
+```bash
+python3 scripts/sync_projects.py
+python3 -m unittest discover -s tests
+```
+
+Set `GH_TOKEN` in your environment for an authenticated API quota if needed; never put a token in website files. The deployment workflow uses its built-in, short-lived GitHub token. Daily builds regenerate the published HTML without committing generated updates back to this repository. If a refresh fails, the previous successful deployment stays live.
+
+GitHub can disable scheduled workflows in public repositories after 60 days without repository activity. If that happens, re-enable the workflow in the repository's Actions tab. A push or manual workflow run also publishes a fresh catalog.
 
 ### Netlify (Second Host + Auto)
 - This repo includes Netlify config: `netlify.toml`

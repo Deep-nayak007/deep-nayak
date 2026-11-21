@@ -1,0 +1,183 @@
+{
+  "exclude": {
+    "Deep-nayak007": "GitHub profile repository",
+    "deep-nayak": "This portfolio",
+    "web-portfolio": "Earlier portfolio",
+    "Leetcode": "Coding practice collection",
+    "neetcode-submissions": "Coding practice collection",
+    "GeeksforGeeksProblems": "Coding practice collection",
+    "gesture-fs-intern-takehome": "Duplicate of rag-document-qa-assistant",
+    "Hydra-V": "Duplicate of hydrawav3"
+  },
+  "projects": {
+    "way-out": {
+      "title": "Way Out",
+      "category": "Full Stack",
+      "description": "Wildfire evacuation coordination prototype with voice outreach, ride matching, dispatcher approval, and live driver tracking.",
+      "stack": ["FastAPI", "Next.js", "MongoDB"]
+    },
+    "ajaia-docs": {
+      "title": "Ajaia Docs",
+      "category": "Full Stack",
+      "description": "Collaborative rich-text editor with document import, editor and viewer sharing, autosave, and conflict detection for simultaneous edits.",
+      "stack": ["TypeScript", "React", "SQLite"],
+      "demo": "https://ajaia-docs-qwbs.onrender.com"
+    },
+    "Auditor": {
+      "title": "Auditor",
+      "category": "AI & Data",
+      "description": "AI accounting-close demo using synthetic financial data, with agent-proposed entries, deterministic controls, human exception review, and an audit trail.",
+      "stack": ["Convex", "React", "Claude"]
+    },
+    "new-grad-job-scout": {
+      "title": "New Grad Job Scout",
+      "category": "Full Stack",
+      "description": "Job-search dashboard that aggregates public feeds, removes duplicate roles, tracks application status locally, and exports Excel workbooks.",
+      "stack": ["Python", "SQLite", "GitHub Actions"]
+    },
+    "Fiducia-Governed-Five-Agent-Fund-Approval": {
+      "title": "Fiducia",
+      "category": "AI & Data",
+      "description": "Synthetic investment due-diligence prototype with five bounded agents, evidence-backed checks, fee comparisons, and governed approval recommendations.",
+      "stack": ["Python", "Streamlit", "Agent Workflows"]
+    },
+    "cse598-capstone-baseline": {
+      "title": "Course Policy Q&A Baseline",
+      "category": "AI & Data",
+      "description": "Reproducible course-policy retrieval baseline using TF-IDF-style vectors and cosine similarity to return answers, confidence scores, and source IDs.",
+      "stack": ["Python", "Information Retrieval", "TF-IDF"]
+    },
+    "codex-rust-codebase-exploration": {
+      "title": "Codex Rust Codebase Exploration",
+      "category": "Code Study",
+      "description": "Code-reading study covering Rust environment verification, crate dependency mapping, and a three-level call trace through the Codex CLI.",
+      "stack": ["Rust", "Cargo", "Code Analysis"]
+    },
+    "rag-document-qa-assistant": {
+      "title": "Local RAG Document Q&A Assistant",
+      "category": "AI & Data",
+      "description": "Local document Q&A assistant that retrieves relevant passages with FAISS and generates source-backed answers using HuggingFace embeddings and FLAN-T5.",
+      "stack": ["Python", "FAISS", "HuggingFace"]
+    },
+    "consent-location-share": {
+      "title": "Consent Location Share",
+      "category": "Full Stack",
+      "description": "Location-sharing web app that creates shareable requests and opens map coordinates only after the recipient explicitly grants browser permission.",
+      "stack": ["Node.js", "JavaScript", "Geolocation"]
+    },
+    "nyc-taxi-kafka-neo4j-pipeline": {
+      "title": "NYC Taxi Graph Data Pipeline",
+      "category": "AI & Data",
+      "description": "Streaming taxi-data pipeline using Kafka, Python, and Neo4j for graph processing, with containerized services deployed on Kubernetes.",
+      "stack": ["Kafka", "Neo4j", "Kubernetes"]
+    },
+    "vitals-wifi-app": {
+      "title": "Vitals Wi-Fi App",
+      "category": "Apps & Games",
+      "description": "Experimental vitals prototype that streams iPhone measurements to a Mac dashboard over Wi-Fi, with heart and breath modes and signal-quality scoring.",
+      "stack": ["Node.js", "WebSocket", "Signal Processing"]
+    },
+    "jarvis-requires-memory": {
+      "title": "Jarvis Requires Memory",
+      "category": "AI & Data",
+      "description": "LLM memory research project comparing no memory, conversational retrieval, and structured semantic and episodic memory across multi-session conversations.",
+      "stack": ["Python", "LLM Memory", "Evaluation"]
+    },
+    "precollege-program-match": {
+      "title": "Pathforge Counselor Studio",
+      "category": "Full Stack",
+      "description": "Pre-college program matching dashboard with goal-aware rankings, fit explanations, program comparisons, custom program creation, and API run history.",
+      "stack": ["React", "TypeScript", "Express"]
+    },
+    "precollege-agentic-pipeline": {
+      "title": "Agentic Pre-College Program Pipeline",
+      "category": "AI & Data",
+      "description": "Discovery, extraction, and verification pipeline for university programs, with evidence scoring, student matching, and JSON, CSV, and SQLite outputs.",
+      "stack": ["Python", "Pydantic", "SQLite"]
+    },
+    "hydrawav3": {
+      "title": "HYDRA-V",
+      "category": "Apps & Games",
+      "description": "Recovery-exercise prototype combining camera-based intake, AR movement guidance, hardware synchronization, and Python session analytics.",
+      "stack": ["JavaScript", "Node.js", "Python"]
+    },
+    "moodmusics": {
+      "title": "MoodMusics",
+      "category": "AI & Data",
+      "description": "Mood-based music player built with Django, TensorFlow, Keras, and OpenCV.",
+      "stack": ["Django", "TensorFlow", "OpenCV"]
+    },
+    "clinical-reconciliation-engine": {
+      "title": "Clinical Data Reconciliation Engine",
+      "category": "AI & Data",
+      "description": "AI-powered full-stack application for reconciling conflicting medication records and scoring patient data quality across clinical sources.",
+      "stack": ["FastAPI", "React", "Claude"]
+    },
+    "Wallpapers-MKBSD": {
+      "title": "Wallpapers MKBSD",
+      "category": "Apps & Games",
+      "description": "JavaScript wallpaper utility. Explore the script and source code on GitHub.",
+      "stack": ["JavaScript"]
+    },
+    "reactcalculator": {
+      "title": "React Calculator",
+      "category": "Apps & Games",
+      "description": "Calculator application built with React and JavaScript.",
+      "stack": ["React", "JavaScript", "CSS"]
+    },
+    "Website": {
+      "title": "Professional Services Website",
+      "category": "Full Stack",
+      "description": "Responsive website helping accountants, company secretaries, lawyers, and tax consultants present their services to prospective clients.",
+      "stack": ["HTML", "CSS", "JavaScript"]
+    },
+    "react-socialmedia": {
+      "title": "React Social Media App",
+      "category": "Full Stack",
+      "description": "Social media interface project built with React and JavaScript.",
+      "stack": ["React", "JavaScript", "CSS"]
+    },
+    "Voice-Recognition-using-Python": {
+      "title": "Voice Recognition Using Python",
+      "category": "AI & Data",
+      "description": "Speech-to-text project using PyAudio to capture spoken input and convert it to text.",
+      "stack": ["Python", "PyAudio", "Speech Recognition"]
+    },
+    "Electronic-price-comparision-": {
+      "title": "Electronic Price Comparison",
+      "category": "Apps & Games",
+      "description": "Website that organizes electronic products by category and presents their prices for comparison.",
+      "stack": ["HTML", "CSS"]
+    },
+    "3D-Box-Collider-Game-": {
+      "title": "3D Box Collider Game",
+      "category": "Apps & Games",
+      "description": "3D obstacle game with progressively longer levels, where touching an obstacle or falling ends the run.",
+      "stack": ["C#", "3D Game"]
+    },
+    "online-banking-money-transfer": {
+      "title": "Online Banking Money Transfer",
+      "category": "Full Stack",
+      "description": "Banking-system project with account balances and money transfers between accounts, backed by a MySQL database.",
+      "stack": ["PHP", "MySQL", "HTML / CSS"]
+    },
+    "Remote-File-Sharing-System-using-QR-Code": {
+      "title": "Remote File Transmission System",
+      "category": "Full Stack",
+      "description": "File-sharing platform for documents and images using QR-code access, user registration, and email OTP verification.",
+      "stack": [".NET MVC", "QR Codes", "Authentication"]
+    },
+    "Direction-Map": {
+      "title": "Direction Map",
+      "category": "Apps & Games",
+      "description": "Mapping project for finding places, displaying directions between cities, and calculating route distances.",
+      "stack": ["HTML", "Maps", "Routing"]
+    },
+    "The-Sparks-Foundation-DataScience-Task-1": {
+      "title": "Linear Regression Study",
+      "category": "AI & Data",
+      "description": "Data science notebook exploring linear regression for a Sparks Foundation task.",
+      "stack": ["Python", "Jupyter", "Linear Regression"]
+    }
+  }
+}

@@ -20,6 +20,12 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
+    <noscript>
+      <style>
+        #raceOverlay { display: none; }
+        .anim-fade { opacity: 1; transform: none; }
+      </style>
+    </noscript>
   </head>
   <body>
     <div class="scroll-progress" aria-hidden="true">
@@ -178,64 +184,594 @@
       <div class="section-divider"></div>
 
       <section id="projects">
-        <p class="sector-label anim-fade">// SECTOR 03</p>
-        <h2 class="section-title anim-fade">Engineering Projects</h2>
-
-        <div class="projects-grid">
-          <article class="proj-card anim-fade">
-            <div class="speed-lines"></div>
-            <p class="proj-tag">Security + Full Stack</p>
-            <h3 class="proj-name">Remote File Transmission System</h3>
-            <p class="proj-desc">
-              Secure file-sharing platform with QR-based access, OTP authentication, encrypted
-              storage, and role-based authorization.
-            </p>
+        <!-- PROJECTS:START -->
+        <div class="projects-heading">
+          <div>
+            <p class="sector-label">// SECTOR 03</p>
+            <h2 class="section-title">Engineering Projects</h2>
+            <p class="projects-intro">From my public GitHub repositories. Latest work first, from AI experiments to full-stack applications.</p>
+          </div>
+          <a class="projects-github" href="https://github.com/Deep-nayak007?tab=repositories" target="_blank" rel="noopener noreferrer">Explore GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="projects-toolbar" id="projectControls" hidden>
+          <div class="project-search">
+            <label for="projectSearch">Find a project</label>
+            <input id="projectSearch" type="search" placeholder="Search projects or technologies" autocomplete="off" />
+          </div>
+          <div class="project-category">
+            <label for="projectCategory">Focus area</label>
+            <select id="projectCategory">
+              <option value="">All areas</option>
+              <option value="AI &amp; Data">AI &amp; Data</option>
+              <option value="Apps &amp; Games">Apps &amp; Games</option>
+              <option value="Code Study">Code Study</option>
+              <option value="Full Stack">Full Stack</option>
+            </select>
+          </div>
+        </div>
+        <p class="projects-count" id="projectCount" role="status" aria-live="polite" aria-atomic="true">28 projects · Refreshed daily from GitHub</p>
+        <div class="projects-grid" id="projectGrid">
+          <article class="proj-card" data-category="Full Stack">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">Full Stack</p><span class="proj-fork">Forked repository</span></div>
+            <h3 class="proj-name">Way Out</h3>
+            <p class="proj-repo">way-out</p>
+            <p class="proj-desc">Wildfire evacuation coordination prototype with voice outreach, ride matching, dispatcher approval, and live driver tracking.</p>
             <div class="proj-stats">
-              <span class="proj-stat">.NET MVC</span>
-              <span class="proj-stat">REST APIs</span>
-              <span class="proj-stat">Security First</span>
+              <span class="proj-stat">FastAPI</span>
+              <span class="proj-stat">Next.js</span>
+              <span class="proj-stat">MongoDB</span>
             </div>
-            <a class="proj-link" href="https://github.com/Deep-nayak007/Remote-File-Sharing-System-using-QR-Code" target="_blank" rel="noopener">
-              View Project
-            </a>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2026-11-16T06:05:54+00:00">Nov 2026</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/way-out" target="_blank" rel="noopener noreferrer" aria-label="View Way Out on GitHub">View Code</a>
+              <a class="proj-link" href="https://way-out-livid.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Open Way Out live demo">Live Demo</a>
+              </div>
+            </div>
           </article>
 
-          <article class="proj-card anim-fade">
-            <div class="speed-lines"></div>
-            <p class="proj-tag">HealthTech + Real-Time</p>
+          <article class="proj-card" data-category="Full Stack">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">Full Stack</p></div>
+            <h3 class="proj-name">Ajaia Docs</h3>
+            <p class="proj-repo">ajaia-docs</p>
+            <p class="proj-desc">Collaborative rich-text editor with document import, editor and viewer sharing, autosave, and conflict detection for simultaneous edits.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">TypeScript</span>
+              <span class="proj-stat">React</span>
+              <span class="proj-stat">SQLite</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2026-11-13T22:08:34+00:00">Nov 2026</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/ajaia-docs" target="_blank" rel="noopener noreferrer" aria-label="View Ajaia Docs on GitHub">View Code</a>
+              <a class="proj-link" href="https://ajaia-docs-qwbs.onrender.com" target="_blank" rel="noopener noreferrer" aria-label="Open Ajaia Docs live demo">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="AI &amp; Data">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">AI &amp; Data</p><span class="proj-fork">Forked repository</span></div>
+            <h3 class="proj-name">Auditor</h3>
+            <p class="proj-repo">Auditor</p>
+            <p class="proj-desc">AI accounting-close demo using synthetic financial data, with agent-proposed entries, deterministic controls, human exception review, and an audit trail.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">Convex</span>
+              <span class="proj-stat">React</span>
+              <span class="proj-stat">Claude</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2026-11-07T19:48:04+00:00">Nov 2026</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/Auditor" target="_blank" rel="noopener noreferrer" aria-label="View Auditor on GitHub">View Code</a>
+              <a class="proj-link" href="https://auditor-nine-ecru.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Open Auditor live demo">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="Full Stack">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">Full Stack</p></div>
+            <h3 class="proj-name">New Grad Job Scout</h3>
+            <p class="proj-repo">new-grad-job-scout</p>
+            <p class="proj-desc">Job-search dashboard that aggregates public feeds, removes duplicate roles, tracks application status locally, and exports Excel workbooks.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">Python</span>
+              <span class="proj-stat">SQLite</span>
+              <span class="proj-stat">GitHub Actions</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2026-11-03T09:40:42+00:00">Nov 2026</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/new-grad-job-scout" target="_blank" rel="noopener noreferrer" aria-label="View New Grad Job Scout on GitHub">View Code</a>
+              <a class="proj-link" href="https://deep-nayak007.github.io/new-grad-job-scout/" target="_blank" rel="noopener noreferrer" aria-label="Open New Grad Job Scout live demo">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="AI &amp; Data">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">AI &amp; Data</p></div>
+            <h3 class="proj-name">Fiducia</h3>
+            <p class="proj-repo">Fiducia-Governed-Five-Agent-Fund-Approval</p>
+            <p class="proj-desc">Synthetic investment due-diligence prototype with five bounded agents, evidence-backed checks, fee comparisons, and governed approval recommendations.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">Python</span>
+              <span class="proj-stat">Streamlit</span>
+              <span class="proj-stat">Agent Workflows</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2026-09-25T17:54:08+00:00">Sep 2026</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/Fiducia-Governed-Five-Agent-Fund-Approval" target="_blank" rel="noopener noreferrer" aria-label="View Fiducia on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="AI &amp; Data">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">AI &amp; Data</p></div>
+            <h3 class="proj-name">Course Policy Q&amp;A Baseline</h3>
+            <p class="proj-repo">cse598-capstone-baseline</p>
+            <p class="proj-desc">Reproducible course-policy retrieval baseline using TF-IDF-style vectors and cosine similarity to return answers, confidence scores, and source IDs.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">Python</span>
+              <span class="proj-stat">Information Retrieval</span>
+              <span class="proj-stat">TF-IDF</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2026-09-06T19:54:05+00:00">Sep 2026</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/cse598-capstone-baseline" target="_blank" rel="noopener noreferrer" aria-label="View Course Policy Q&amp;A Baseline on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="Code Study">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">Code Study</p></div>
+            <h3 class="proj-name">Codex Rust Codebase Exploration</h3>
+            <p class="proj-repo">codex-rust-codebase-exploration</p>
+            <p class="proj-desc">Code-reading study covering Rust environment verification, crate dependency mapping, and a three-level call trace through the Codex CLI.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">Rust</span>
+              <span class="proj-stat">Cargo</span>
+              <span class="proj-stat">Code Analysis</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2026-08-31T02:22:18+00:00">Aug 2026</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/codex-rust-codebase-exploration" target="_blank" rel="noopener noreferrer" aria-label="View Codex Rust Codebase Exploration on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="AI &amp; Data">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">AI &amp; Data</p></div>
+            <h3 class="proj-name">Local RAG Document Q&amp;A Assistant</h3>
+            <p class="proj-repo">rag-document-qa-assistant</p>
+            <p class="proj-desc">Local document Q&amp;A assistant that retrieves relevant passages with FAISS and generates source-backed answers using HuggingFace embeddings and FLAN-T5.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">Python</span>
+              <span class="proj-stat">FAISS</span>
+              <span class="proj-stat">HuggingFace</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2026-08-14T17:35:31+00:00">Aug 2026</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/rag-document-qa-assistant" target="_blank" rel="noopener noreferrer" aria-label="View Local RAG Document Q&amp;A Assistant on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="Full Stack">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">Full Stack</p></div>
+            <h3 class="proj-name">Consent Location Share</h3>
+            <p class="proj-repo">consent-location-share</p>
+            <p class="proj-desc">Location-sharing web app that creates shareable requests and opens map coordinates only after the recipient explicitly grants browser permission.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">Node.js</span>
+              <span class="proj-stat">JavaScript</span>
+              <span class="proj-stat">Geolocation</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2026-06-04T22:42:28+00:00">Jun 2026</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/consent-location-share" target="_blank" rel="noopener noreferrer" aria-label="View Consent Location Share on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="AI &amp; Data">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">AI &amp; Data</p></div>
+            <h3 class="proj-name">NYC Taxi Graph Data Pipeline</h3>
+            <p class="proj-repo">nyc-taxi-kafka-neo4j-pipeline</p>
+            <p class="proj-desc">Streaming taxi-data pipeline using Kafka, Python, and Neo4j for graph processing, with containerized services deployed on Kubernetes.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">Kafka</span>
+              <span class="proj-stat">Neo4j</span>
+              <span class="proj-stat">Kubernetes</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2026-05-28T19:31:42+00:00">May 2026</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/nyc-taxi-kafka-neo4j-pipeline" target="_blank" rel="noopener noreferrer" aria-label="View NYC Taxi Graph Data Pipeline on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="Apps &amp; Games">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">Apps &amp; Games</p></div>
             <h3 class="proj-name">Vitals Wi-Fi App</h3>
-            <p class="proj-desc">
-              Real-time vitals app that measures on iPhone and streams to Mac dashboard over Wi-Fi,
-              with heart and breath tracking modes plus confidence scoring.
-            </p>
+            <p class="proj-repo">vitals-wifi-app</p>
+            <p class="proj-desc">Experimental vitals prototype that streams iPhone measurements to a Mac dashboard over Wi-Fi, with heart and breath modes and signal-quality scoring.</p>
             <div class="proj-stats">
               <span class="proj-stat">Node.js</span>
               <span class="proj-stat">WebSocket</span>
               <span class="proj-stat">Signal Processing</span>
             </div>
-            <a class="proj-link" href="https://github.com/Deep-nayak007/vitals-wifi-app" target="_blank" rel="noopener">
-              View Project
-            </a>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2026-05-12T01:00:01+00:00">May 2026</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/vitals-wifi-app" target="_blank" rel="noopener noreferrer" aria-label="View Vitals Wi-Fi App on GitHub">View Code</a>
+
+              </div>
+            </div>
           </article>
 
-          <article class="proj-card anim-fade">
-            <div class="speed-lines"></div>
-            <p class="proj-tag">AI + Healthcare</p>
+          <article class="proj-card" data-category="AI &amp; Data">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">AI &amp; Data</p></div>
+            <h3 class="proj-name">Jarvis Requires Memory</h3>
+            <p class="proj-repo">jarvis-requires-memory</p>
+            <p class="proj-desc">LLM memory research project comparing no memory, conversational retrieval, and structured semantic and episodic memory across multi-session conversations.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">Python</span>
+              <span class="proj-stat">LLM Memory</span>
+              <span class="proj-stat">Evaluation</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2026-04-28T21:25:39+00:00">Apr 2026</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/jarvis-requires-memory" target="_blank" rel="noopener noreferrer" aria-label="View Jarvis Requires Memory on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="Full Stack">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">Full Stack</p></div>
+            <h3 class="proj-name">Pathforge Counselor Studio</h3>
+            <p class="proj-repo">precollege-program-match</p>
+            <p class="proj-desc">Pre-college program matching dashboard with goal-aware rankings, fit explanations, program comparisons, custom program creation, and API run history.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">React</span>
+              <span class="proj-stat">TypeScript</span>
+              <span class="proj-stat">Express</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2026-04-20T03:56:46+00:00">Apr 2026</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/precollege-program-match" target="_blank" rel="noopener noreferrer" aria-label="View Pathforge Counselor Studio on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="AI &amp; Data">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">AI &amp; Data</p></div>
+            <h3 class="proj-name">Agentic Pre-College Program Pipeline</h3>
+            <p class="proj-repo">precollege-agentic-pipeline</p>
+            <p class="proj-desc">Discovery, extraction, and verification pipeline for university programs, with evidence scoring, student matching, and JSON, CSV, and SQLite outputs.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">Python</span>
+              <span class="proj-stat">Pydantic</span>
+              <span class="proj-stat">SQLite</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2026-04-20T03:04:16+00:00">Apr 2026</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/precollege-agentic-pipeline" target="_blank" rel="noopener noreferrer" aria-label="View Agentic Pre-College Program Pipeline on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="Apps &amp; Games">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">Apps &amp; Games</p></div>
+            <h3 class="proj-name">HYDRA-V</h3>
+            <p class="proj-repo">hydrawav3</p>
+            <p class="proj-desc">Recovery-exercise prototype combining camera-based intake, AR movement guidance, hardware synchronization, and Python session analytics.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">JavaScript</span>
+              <span class="proj-stat">Node.js</span>
+              <span class="proj-stat">Python</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2026-04-19T17:11:18+00:00">Apr 2026</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/hydrawav3" target="_blank" rel="noopener noreferrer" aria-label="View HYDRA-V on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="AI &amp; Data">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">AI &amp; Data</p></div>
+            <h3 class="proj-name">MoodMusics</h3>
+            <p class="proj-repo">moodmusics</p>
+            <p class="proj-desc">Mood-based music player built with Django, TensorFlow, Keras, and OpenCV.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">Django</span>
+              <span class="proj-stat">TensorFlow</span>
+              <span class="proj-stat">OpenCV</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2026-04-16T02:46:27+00:00">Apr 2026</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/moodmusics" target="_blank" rel="noopener noreferrer" aria-label="View MoodMusics on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="AI &amp; Data">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">AI &amp; Data</p></div>
             <h3 class="proj-name">Clinical Data Reconciliation Engine</h3>
-            <p class="proj-desc">
-              AI-powered full-stack system to reconcile conflicting medication records and validate
-              patient data quality across clinical workflows.
-            </p>
+            <p class="proj-repo">clinical-reconciliation-engine</p>
+            <p class="proj-desc">AI-powered full-stack application for reconciling conflicting medication records and scoring patient data quality across clinical sources.</p>
             <div class="proj-stats">
               <span class="proj-stat">FastAPI</span>
               <span class="proj-stat">React</span>
-              <span class="proj-stat">LLM Integration</span>
+              <span class="proj-stat">Claude</span>
             </div>
-            <a class="proj-link" href="https://github.com/Deep-nayak007/clinical-reconciliation-engine" target="_blank" rel="noopener">
-              View Project
-            </a>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2026-03-20T20:41:15+00:00">Mar 2026</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/clinical-reconciliation-engine" target="_blank" rel="noopener noreferrer" aria-label="View Clinical Data Reconciliation Engine on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="Apps &amp; Games">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">Apps &amp; Games</p></div>
+            <h3 class="proj-name">Wallpapers MKBSD</h3>
+            <p class="proj-repo">Wallpapers-MKBSD</p>
+            <p class="proj-desc">JavaScript wallpaper utility. Explore the script and source code on GitHub.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">JavaScript</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2024-09-28T20:53:29+00:00">Sep 2024</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/Wallpapers-MKBSD" target="_blank" rel="noopener noreferrer" aria-label="View Wallpapers MKBSD on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="Apps &amp; Games">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">Apps &amp; Games</p></div>
+            <h3 class="proj-name">React Calculator</h3>
+            <p class="proj-repo">reactcalculator</p>
+            <p class="proj-desc">Calculator application built with React and JavaScript.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">React</span>
+              <span class="proj-stat">JavaScript</span>
+              <span class="proj-stat">CSS</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2024-06-01T15:31:51+00:00">Jun 2024</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/reactcalculator" target="_blank" rel="noopener noreferrer" aria-label="View React Calculator on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="Full Stack">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">Full Stack</p></div>
+            <h3 class="proj-name">Professional Services Website</h3>
+            <p class="proj-repo">Website</p>
+            <p class="proj-desc">Responsive website helping accountants, company secretaries, lawyers, and tax consultants present their services to prospective clients.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">HTML</span>
+              <span class="proj-stat">CSS</span>
+              <span class="proj-stat">JavaScript</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2024-03-10T20:52:38+00:00">Mar 2024</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/Website" target="_blank" rel="noopener noreferrer" aria-label="View Professional Services Website on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="Full Stack">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">Full Stack</p></div>
+            <h3 class="proj-name">React Social Media App</h3>
+            <p class="proj-repo">react-socialmedia</p>
+            <p class="proj-desc">Social media interface project built with React and JavaScript.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">React</span>
+              <span class="proj-stat">JavaScript</span>
+              <span class="proj-stat">CSS</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2024-02-05T20:02:37+00:00">Feb 2024</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/react-socialmedia" target="_blank" rel="noopener noreferrer" aria-label="View React Social Media App on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="AI &amp; Data">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">AI &amp; Data</p></div>
+            <h3 class="proj-name">Voice Recognition Using Python</h3>
+            <p class="proj-repo">Voice-Recognition-using-Python</p>
+            <p class="proj-desc">Speech-to-text project using PyAudio to capture spoken input and convert it to text.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">Python</span>
+              <span class="proj-stat">PyAudio</span>
+              <span class="proj-stat">Speech Recognition</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2022-06-12T07:14:36+00:00">Jun 2022</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/Voice-Recognition-using-Python" target="_blank" rel="noopener noreferrer" aria-label="View Voice Recognition Using Python on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="Apps &amp; Games">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">Apps &amp; Games</p></div>
+            <h3 class="proj-name">Electronic Price Comparison</h3>
+            <p class="proj-repo">Electronic-price-comparision-</p>
+            <p class="proj-desc">Website that organizes electronic products by category and presents their prices for comparison.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">HTML</span>
+              <span class="proj-stat">CSS</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2022-06-12T07:13:52+00:00">Jun 2022</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/Electronic-price-comparision-" target="_blank" rel="noopener noreferrer" aria-label="View Electronic Price Comparison on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="Apps &amp; Games">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">Apps &amp; Games</p></div>
+            <h3 class="proj-name">3D Box Collider Game</h3>
+            <p class="proj-repo">3D-Box-Collider-Game-</p>
+            <p class="proj-desc">3D obstacle game with progressively longer levels, where touching an obstacle or falling ends the run.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">C#</span>
+              <span class="proj-stat">3D Game</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2022-06-12T07:11:19+00:00">Jun 2022</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/3D-Box-Collider-Game-" target="_blank" rel="noopener noreferrer" aria-label="View 3D Box Collider Game on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="Full Stack">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">Full Stack</p></div>
+            <h3 class="proj-name">Online Banking Money Transfer</h3>
+            <p class="proj-repo">online-banking-money-transfer</p>
+            <p class="proj-desc">Banking-system project with account balances and money transfers between accounts, backed by a MySQL database.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">PHP</span>
+              <span class="proj-stat">MySQL</span>
+              <span class="proj-stat">HTML / CSS</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2022-06-12T07:05:42+00:00">Jun 2022</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/online-banking-money-transfer" target="_blank" rel="noopener noreferrer" aria-label="View Online Banking Money Transfer on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="Full Stack">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">Full Stack</p></div>
+            <h3 class="proj-name">Remote File Transmission System</h3>
+            <p class="proj-repo">Remote-File-Sharing-System-using-QR-Code</p>
+            <p class="proj-desc">File-sharing platform for documents and images using QR-code access, user registration, and email OTP verification.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">.NET MVC</span>
+              <span class="proj-stat">QR Codes</span>
+              <span class="proj-stat">Authentication</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2022-06-12T06:59:12+00:00">Jun 2022</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/Remote-File-Sharing-System-using-QR-Code" target="_blank" rel="noopener noreferrer" aria-label="View Remote File Transmission System on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="Apps &amp; Games">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">Apps &amp; Games</p></div>
+            <h3 class="proj-name">Direction Map</h3>
+            <p class="proj-repo">Direction-Map</p>
+            <p class="proj-desc">Mapping project for finding places, displaying directions between cities, and calculating route distances.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">HTML</span>
+              <span class="proj-stat">Maps</span>
+              <span class="proj-stat">Routing</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2022-06-12T06:57:46+00:00">Jun 2022</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/Direction-Map" target="_blank" rel="noopener noreferrer" aria-label="View Direction Map on GitHub">View Code</a>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="AI &amp; Data">
+            <div class="speed-lines" aria-hidden="true"></div>
+            <div class="proj-meta"><p class="proj-tag">AI &amp; Data</p></div>
+            <h3 class="proj-name">Linear Regression Study</h3>
+            <p class="proj-repo">The-Sparks-Foundation-DataScience-Task-1</p>
+            <p class="proj-desc">Data science notebook exploring linear regression for a Sparks Foundation task.</p>
+            <div class="proj-stats">
+              <span class="proj-stat">Python</span>
+              <span class="proj-stat">Jupyter</span>
+              <span class="proj-stat">Linear Regression</span>
+            </div>
+            <div class="proj-footer">
+              <p class="proj-updated">Updated <time datetime="2021-12-20T11:44:17+00:00">Dec 2021</time></p>
+              <div class="proj-links">
+                <a class="proj-link" href="https://github.com/Deep-nayak007/The-Sparks-Foundation-DataScience-Task-1" target="_blank" rel="noopener noreferrer" aria-label="View Linear Regression Study on GitHub">View Code</a>
+
+              </div>
+            </div>
           </article>
         </div>
+        <p class="projects-empty" id="projectEmpty" hidden>No matching projects. Try another name, technology, or focus area.</p>
+        <div class="projects-more">
+          <button class="btn btn-secondary" id="projectShowMore" type="button" aria-controls="projectGrid" hidden>Show all projects</button>
+        </div>
+        <!-- PROJECTS:END -->
       </section>
 
       <div class="section-divider"></div>
