@@ -20,10 +20,9 @@ class ProjectSyncTests(unittest.TestCase):
         projects = sync.build_projects(repos, {"exclude": {"PRACTICE": "practice"}, "projects": {}})
         self.assertEqual([project["name"] for project in projects], ["Public"])
 
-    def test_new_projects_sort_first_and_forks_keep_attribution(self):
-        projects = sync.build_projects([repo("Older"), repo("Newer", pushed_at="2026-11-20T12:00:00Z", fork=True)], {"exclude": {}, "projects": {}})
-        self.assertEqual(projects[0]["name"], "Newer")
-        self.assertIn("Forked repository", sync.render_card(projects[0]))
+    def test_new_projects_sort_first(self):
+        projects = sync.build_projects([repo("Older"), repo("Newer", pushed_at="2026-11-20T12:00:00Z")], {"exclude": {}, "projects": {}})
+        self.assertEqual([project["name"] for project in projects], ["Newer", "Older"])
 
     def test_unknown_project_uses_github_metadata(self):
         project = sync.build_projects([repo("new-project", homepage="https://example.com/demo")], {"exclude": {}, "projects": {}})[0]

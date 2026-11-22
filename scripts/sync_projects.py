@@ -109,7 +109,6 @@ def build_projects(repos, config):
             "stack": custom.get("stack") or ([repo["language"]] if repo.get("language") else []),
             "url": f"https://github.com/{OWNER}/{quote(name, safe='')}",
             "demo": web_url(custom.get("demo") or repo.get("homepage")),
-            "fork": bool(repo.get("fork")),
             "updated": updated.isoformat(),
             "date": updated.strftime("%b %Y"),
         })
@@ -121,12 +120,11 @@ def build_projects(repos, config):
 def render_card(project):
     p = {key: escape(str(value), quote=True) for key, value in project.items()}
     stack = "\n".join(f'              <span class="proj-stat">{escape(tag)}</span>' for tag in project["stack"])
-    fork = '<span class="proj-fork">Forked repository</span>' if project["fork"] else ""
     demo = (f'              <a class="proj-link" href="{p["demo"]}" target="_blank" rel="noopener noreferrer" '
             f'aria-label="Open {p["title"]} live demo">Live Demo</a>') if project["demo"] else ""
     return f'''          <article class="proj-card" data-category="{p['category']}">
             <div class="speed-lines" aria-hidden="true"></div>
-            <div class="proj-meta"><p class="proj-tag">{p['category']}</p>{fork}</div>
+            <div class="proj-meta"><p class="proj-tag">{p['category']}</p></div>
             <h3 class="proj-name">{p['title']}</h3>
             <p class="proj-repo">{p['name']}</p>
             <p class="proj-desc">{p['description']}</p>

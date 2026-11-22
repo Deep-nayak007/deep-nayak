@@ -141,7 +141,7 @@ Recognized by the Intellectual Property Office, United Kingdom.
 
 `scripts/sync_projects.py` reads all public repositories from the GitHub API, sorts projects by their latest push, and renders static cards into `index.html`. Visitors do not need GitHub access or a working API connection. Search, focus-area filters, and a six-project preview are progressively enhanced with JavaScript; all projects remain available without JavaScript.
 
-`data/project-overrides.json` contains readable titles, README-based descriptions, technology tags, and optional demo links for existing projects. Forked repositories are labeled. The exclusion list omits profile/portfolio repositories, coding-practice collections, and duplicate copies of projects. Archived, disabled, and private repositories are excluded automatically.
+`data/project-overrides.json` contains readable titles, README-based descriptions, technology tags, and optional demo links for existing projects. The exclusion list omits profile/portfolio repositories, coding-practice collections, and duplicate copies of projects. Archived, disabled, and private repositories are excluded automatically.
 
 New public repositories appear automatically with their GitHub description (or first usable README paragraph), primary language, repository link, and homepage when set. They appear under **Other Projects** until a focus area is added to the overrides file.
 
